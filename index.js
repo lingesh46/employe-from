@@ -52,7 +52,7 @@ function validateform(name, address, role, salary) {
     const error1 = document.getElementById("error-msg1");
     const error2 = document.getElementById("error-msg2");
     const error3 = document.getElementById("error-msg3");
-
+ 
     console.log(name, "name", address, role, salary);
 
     if (!/^[a-zA-Z]/.test(name)) {
@@ -100,7 +100,10 @@ function validateform(name, address, role, salary) {
         return false;
     }
     {
+        error.textContent = "";
         error1.textContent = "";
+        error2.textContent = "";
+        error3.textContent = "";
 
         return true;
     }
